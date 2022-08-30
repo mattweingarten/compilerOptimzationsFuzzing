@@ -59,7 +59,7 @@ benchmarks = np.unique(df['benchmark'].to_numpy())
 # axes1 = axis[0]
 # print(axes1)
 # print(axis)
-fig = plt.figure(figsize= (30,10))
+fig = plt.figure(figsize= (20,20))
 # print(fig)
 count = 0
 for bench in benchmarks:
@@ -74,7 +74,7 @@ for bench in benchmarks:
     m,n = get(count)
     print(bench)
     df1['fuzzer'] = df1['fuzzer'].apply(lambda x : cut_fuzz_name(x))
-    plt.subplot(4,4,count + 1)
+    plt.subplot(5,3,count + 1)
     plot = sns.barplot(x='fuzzer', y='edges',data=df1, dodge=True,palette=_COLOR_PALETTE, errwidth=0)
         # plt.gca().legend()
         # plt.gca().legend(
@@ -110,7 +110,7 @@ for bench in benchmarks:
     # print(df1)
 # print(count)
 # plt.show()
-plt.subplot(4,4,count)
+# plt.subplot(4,4,count)
 
 plt.savefig("./plots/all.svg")
 
