@@ -1,6 +1,6 @@
 # AST
 
-##Abstract 
+## Abstract 
 
 The automated software testing technique fuzzing has seen a golden age in
 the last decade, with widespread use in industry and academia. On the hunt
